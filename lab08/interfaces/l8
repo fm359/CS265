@@ -1,0 +1,29 @@
+1.1i An interface should hide details of the implementation that are irrelevant to the client (user) of the interface.     Details that are invisible can be changed without affecting the client, perhaps to extend the interface, make it      more efficient, or even replace its implementation.
+
+  ii An interface should provide as much functionality as necessary but no more, and the functions should not overlap      excessively in their capabilities. Having lots of functions may make the library easier to use-whatever one needs     is there for the taking. But a large interface is harder to write and maintain, and sheer size may make it hard       to learn and use as well.
+
+ iii A library function should not write secret files and variables or change global data, and it should be                circumspect about modifying data in its caller. The use of one interface should not demand another one just for       the convenience of the interface designer or implementer. Instead, make the interface self-contained.
+
+  iv Consistency and regularity are important. Related things should be achieved by related means. External                consistency, behaving like something else, is also a goal.
+
+1.2  a) On the first call, strtok's first argument is the string to scan; subsequent calls use NULL to indicate that          scanning should resume where it left off in the previous call. This is a poor interface.
+     b) Because strtok stores a variable in a secret place between calls, only one sequence of calls may be active at         one time; unrelated interleaved calls will interfere with each other.
+     c) The function unquote removes the leading and trailing quotes that appear in the sample input above. It does           not handle nested quotes.
+
+1.3  a) size of line and number of fields are not limited.
+     b) functions added for checking for end of line, splitting line into fields, and obtaining field and number of           fields.
+
+1.4  one problem is that it cannot read from stdin.
+     the revision cannot parse two csv files at once because only one line variable exists.
+
+1.5  C++ implementation allows reading from stdin.
+
+1.6  Yes:
+     a) the user does not need to know much of the implimentation details.
+     b) no redundant functions.
+     c) no subtle changes made to.
+     d) format of written code is consistent.
+
+1.7  see csvgetline2.c
+
+2.1  Part 2 problems included in Makefile
