@@ -1,0 +1,43 @@
+1.   i. List is an ordered collection of elements of some data type. Each element has an index starting from 0.
+    ii. Stack is also a collection of elements where user is only allowed to push or pop elements from the stack.
+   iii. Queue is a structure where the insertion and deletion are performed at the end and beginning respectively.
+    iv. Dictionary is a structure which is an association of unique keys with some values in pairs.
+
+2. Binary search begins from the middle of a sorted collection. If the element is not found in the middle, the search    goes to the middle of the lower half of the collection if the search element is less than the middle element. And     the upper half if the search element is greater than the middle element. It repeats the process for every midpoint    it goes through. In this case, it will search log(n) times at most.
+
+3. Linear search goes through every element in the collection from one end until it finds the desired element. So, it    will search through n elements at most.
+
+4. Linear search is preferable in a case where the collection is not sorted and new elements are being appended.
+
+5. *84* 37 93 82 98 27 63 73 93 27 75 55 45 8
+   8 37 45 82 55 27 63 73 75 27 *84* 93 98 93
+   *8* 37 45 82 55 27 63 73 75 27 84 93 98 93
+   8 *37* 45 82 55 27 63 73 75 27 84 93 98 93
+   8 27 27 *37* 55 82 63 73 75 45 84 93 98 93
+   8 27 27 37 *55* 82 63 73 75 45 84 93 98 93
+   8 27 27 37 45 *55* 63 73 75 82 84 93 98 93
+   8 27 27 37 45 55 *63* 73 75 82 84 93 98 93
+   8 27 27 37 45 55 63 *73* 75 82 84 93 98 93
+   8 27 27 37 45 55 63 73 *75* 82 84 93 98 93
+   8 27 27 37 45 55 63 73 75 *82* 84 93 98 93
+   8 27 27 37 45 55 63 73 75 82 *84* 93 98 93
+   8 27 27 37 45 55 63 73 75 82 84 *93* 98 93
+   8 27 27 37 45 55 63 73 75 82 84 93 *98* 93
+   8 27 27 37 45 55 63 73 75 82 84 93 93 *98*
+
+6. { "06", "24", "3" }
+
+7. L = [13, [28, [24, None]]]
+
+8. when using "char *s = buffer", both s and buffer point to the same space in memory. So changing s also changes
+   buffer. But when using "s = (char*) malloc( 100 )", s is allocated to a different space in memory, so changing
+   s does not change buffer.
+
+9. Jage		24
+   Jesse 	78
+   Cos		86
+   Kate 	28
+   Nash 	11
+   Vera 	99
+   Bob 		38
+
